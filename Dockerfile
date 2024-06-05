@@ -1,4 +1,4 @@
-FROM ghcr.io/coder/coder:v2.10.3
+FROM ghcr.io/coder/coder:v2.11.2
 
 USER root
 
@@ -39,7 +39,7 @@ ADD filesystem-mirror-example.tfrc /home/coder/.terraformrc
 # Comment out lines 40-49 if you plan on only using a volume or network mirror:
 WORKDIR /home/coder/.terraform.d/plugins/registry.terraform.io
 
-ARG CODER_PROVIDER_VERSION=0.22.0
+ARG CODER_PROVIDER_VERSION=0.23.0
 RUN echo "Adding coder/coder v${CODER_PROVIDER_VERSION}" \
     && mkdir -p coder/coder && cd coder/coder \
     && curl -LOs https://github.com/coder/terraform-provider-coder/releases/download/v${CODER_PROVIDER_VERSION}/terraform-provider-coder_${CODER_PROVIDER_VERSION}_linux_amd64.zip
