@@ -1,4 +1,4 @@
-FROM ghcr.io/coder/coder:v2.11.2
+FROM ghcr.io/coder/coder:v2.11.3
 
 USER root
 
@@ -49,7 +49,7 @@ RUN echo "Adding kreuzwerker/docker v${DOCKER_PROVIDER_VERSION}" \
     && mkdir -p kreuzwerker/docker && cd kreuzwerker/docker \
     && curl -LOs https://github.com/kreuzwerker/terraform-provider-docker/releases/download/v${DOCKER_PROVIDER_VERSION}/terraform-provider-docker_${DOCKER_PROVIDER_VERSION}_linux_amd64.zip
 
-ARG KUBERNETES_PROVIDER_VERSION=2.30.0
+ARG KUBERNETES_PROVIDER_VERSION=2.31.0
 RUN echo "Adding kubernetes/kubernetes v${KUBERNETES_PROVIDER_VERSION}" \
     && mkdir -p hashicorp/kubernetes && cd hashicorp/kubernetes \
     && curl -LOs https://releases.hashicorp.com/terraform-provider-kubernetes/${KUBERNETES_PROVIDER_VERSION}/terraform-provider-kubernetes_${KUBERNETES_PROVIDER_VERSION}_linux_amd64.zip
