@@ -1,4 +1,4 @@
-FROM ghcr.io/coder/coder:v2.12.6
+FROM ghcr.io/coder/coder:v2.18.2
 
 USER root
 
@@ -39,7 +39,7 @@ ADD filesystem-mirror-example.tfrc /home/coder/.terraformrc
 # Comment out lines 40-49 if you plan on only using a volume or network mirror:
 WORKDIR /home/coder/.terraform.d/plugins/registry.terraform.io
 
-ARG CODER_PROVIDER_VERSION=1.0.1
+ARG CODER_PROVIDER_VERSION=2.1.0
 RUN echo "Adding coder/coder v${CODER_PROVIDER_VERSION}" \
     && mkdir -p coder/coder && cd coder/coder \
     && curl -LOs https://github.com/coder/terraform-provider-coder/releases/download/v${CODER_PROVIDER_VERSION}/terraform-provider-coder_${CODER_PROVIDER_VERSION}_linux_amd64.zip
@@ -49,12 +49,12 @@ RUN echo "Adding kreuzwerker/docker v${DOCKER_PROVIDER_VERSION}" \
     && mkdir -p kreuzwerker/docker && cd kreuzwerker/docker \
     && curl -LOs https://github.com/kreuzwerker/terraform-provider-docker/releases/download/v${DOCKER_PROVIDER_VERSION}/terraform-provider-docker_${DOCKER_PROVIDER_VERSION}_linux_amd64.zip
 
-ARG KUBERNETES_PROVIDER_VERSION=2.31.0
+ARG KUBERNETES_PROVIDER_VERSION=2.35.1
 RUN echo "Adding kubernetes/kubernetes v${KUBERNETES_PROVIDER_VERSION}" \
     && mkdir -p hashicorp/kubernetes && cd hashicorp/kubernetes \
     && curl -LOs https://releases.hashicorp.com/terraform-provider-kubernetes/${KUBERNETES_PROVIDER_VERSION}/terraform-provider-kubernetes_${KUBERNETES_PROVIDER_VERSION}_linux_amd64.zip
 
-ARG HARVESTER_PROVIDER_VERSION=0.6.4
+ARG HARVESTER_PROVIDER_VERSION=0.6.6
 RUN echo "Adding harvester/harvester v${HARVESTER_PROVIDER_VERSION}" \
     && mkdir -p harvester/harvester && cd harvester/harvester \
     && curl -LOs https://github.com/harvester/terraform-provider-harvester/releases/download/v${HARVESTER_PROVIDER_VERSION}/terraform-provider-harvester_${HARVESTER_PROVIDER_VERSION}_linux_amd64.zip
