@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG CODER_PROVIDER_VERSION=(?<currentValue>\\S+)"],
+      "depNameTemplate": "coder/terraform-provider-coder",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG DOCKER_PROVIDER_VERSION=(?<currentValue>\\S+)"],
+      "depNameTemplate": "kreuzwerker/terraform-provider-docker",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG KUBERNETES_PROVIDER_VERSION=(?<currentValue>\\S+)"],
+      "depNameTemplate": "hashicorp/terraform-provider-kubernetes",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG HARVESTER_PROVIDER_VERSION=(?<currentValue>\\S+)"],
+      "depNameTemplate": "harvester/terraform-provider-harvester",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    }
+  ]
+}
