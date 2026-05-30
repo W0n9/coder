@@ -44,7 +44,7 @@ RUN echo "Adding coder/coder v${CODER_PROVIDER_VERSION}" \
     && mkdir -p coder/coder && cd coder/coder \
     && curl -LOs https://github.com/coder/terraform-provider-coder/releases/download/v${CODER_PROVIDER_VERSION}/terraform-provider-coder_${CODER_PROVIDER_VERSION}_linux_amd64.zip
 
-ARG DOCKER_PROVIDER_VERSION=3.6.2
+ARG DOCKER_PROVIDER_VERSION=3.9.0
 RUN echo "Adding kreuzwerker/docker v${DOCKER_PROVIDER_VERSION}" \
     && mkdir -p kreuzwerker/docker && cd kreuzwerker/docker \
     && curl -LOs https://github.com/kreuzwerker/terraform-provider-docker/releases/download/v${DOCKER_PROVIDER_VERSION}/terraform-provider-docker_${DOCKER_PROVIDER_VERSION}_linux_amd64.zip
