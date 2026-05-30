@@ -54,7 +54,7 @@ RUN echo "Adding kubernetes/kubernetes v${KUBERNETES_PROVIDER_VERSION}" \
     && mkdir -p hashicorp/kubernetes && cd hashicorp/kubernetes \
     && curl -LOs https://releases.hashicorp.com/terraform-provider-kubernetes/${KUBERNETES_PROVIDER_VERSION}/terraform-provider-kubernetes_${KUBERNETES_PROVIDER_VERSION}_linux_amd64.zip
 
-ARG HARVESTER_PROVIDER_VERSION=0.6.7
+ARG HARVESTER_PROVIDER_VERSION=1.8.0
 RUN echo "Adding harvester/harvester v${HARVESTER_PROVIDER_VERSION}" \
     && mkdir -p harvester/harvester && cd harvester/harvester \
     && curl -LOs https://github.com/harvester/terraform-provider-harvester/releases/download/v${HARVESTER_PROVIDER_VERSION}/terraform-provider-harvester_${HARVESTER_PROVIDER_VERSION}_linux_amd64.zip
