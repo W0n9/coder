@@ -3,8 +3,7 @@
   "extends": ["config:recommended"],
   "mode": "full",
   "automerge": true,
-  "automergeType": "pr",
-  "platformAutomerge": true,
+  "automergeType": "branch",
   "customManagers": [
     {
       "customType": "regex",
@@ -37,6 +36,46 @@
       "depNameTemplate": "harvester/terraform-provider-harvester",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)README(-zh)?\\.md$"],
+      "matchStrings": ["`coder/coder` v(?<currentValue>\\S+)"],
+      "depNameTemplate": "coder/terraform-provider-coder",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)README(-zh)?\\.md$"],
+      "matchStrings": ["`kreuzwerker/docker` v(?<currentValue>\\S+)"],
+      "depNameTemplate": "kreuzwerker/terraform-provider-docker",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)README(-zh)?\\.md$"],
+      "matchStrings": ["`hashicorp/kubernetes` v(?<currentValue>\\S+)"],
+      "depNameTemplate": "hashicorp/terraform-provider-kubernetes",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)README(-zh)?\\.md$"],
+      "matchStrings": ["`harvester/harvester` v(?<currentValue>\\S+)"],
+      "depNameTemplate": "harvester/terraform-provider-harvester",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)README(-zh)?\\.md$"],
+      "matchStrings": ["`coder/coder:v(?<currentValue>[^`]+)`"],
+      "depNameTemplate": "coder/coder",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
     }
   ]
 }

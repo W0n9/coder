@@ -4,12 +4,12 @@
 
 ## 功能特性
 
-- 基于官方 `coder/coder:v2.23.2` 镜像
+- 基于官方 `coder/coder:v2.33.6` 镜像
 - 预安装的 Terraform 提供程序：
-  - `coder/coder` v2.8.0
-  - `kreuzwerker/docker` v3.6.2
-  - `hashicorp/kubernetes` v2.37.1
-  - `harvester/harvester` v0.6.7
+  - `coder/coder` v2.18.0
+  - `kreuzwerker/docker` v4.4.0
+  - `hashicorp/kubernetes` v3.1.0
+  - `harvester/harvester` v1.8.0
 - 已配置 Terraform 离线镜像支持
 - 额外工具：`curl`、`unzip`
 
@@ -64,10 +64,10 @@ RUN echo "Adding owner/provider v${PROVIDER_VERSION}" \
 
 | ARG | 默认值 | 描述 |
 |-----|--------|------|
-| `CODER_PROVIDER_VERSION` | `2.8.0` | Coder Terraform 提供程序版本 |
-| `DOCKER_PROVIDER_VERSION` | `3.6.2` | Docker Terraform 提供程序版本 |
-| `KUBERNETES_PROVIDER_VERSION` | `2.37.1` | Kubernetes Terraform 提供程序版本 |
-| `HARVESTER_PROVIDER_VERSION` | `0.6.7` | Harvester Terraform 提供程序版本 |
+| `CODER_PROVIDER_VERSION` | `2.18.0` | Coder Terraform 提供程序版本 |
+| `DOCKER_PROVIDER_VERSION` | `4.4.0` | Docker Terraform 提供程序版本 |
+| `KUBERNETES_PROVIDER_VERSION` | `3.1.0` | Kubernetes Terraform 提供程序版本 |
+| `HARVESTER_PROVIDER_VERSION` | `1.8.0` | Harvester Terraform 提供程序版本 |
 
 ### 自定义版本示例
 

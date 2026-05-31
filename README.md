@@ -4,12 +4,12 @@ A custom Docker image built on top of the official `coder/coder` image, pre-conf
 
 ## Features
 
-- Based on official `coder/coder:v2.23.2` image
+- Based on official `coder/coder:v2.33.6` image
 - Pre-installed Terraform providers:
-  - `coder/coder` v2.8.0
-  - `kreuzwerker/docker` v3.6.2
-  - `hashicorp/kubernetes` v2.37.1
-  - `harvester/harvester` v0.6.7
+  - `coder/coder` v2.18.0
+  - `kreuzwerker/docker` v4.4.0
+  - `hashicorp/kubernetes` v3.1.0
+  - `harvester/harvester` v1.8.0
 - Terraform offline mirror support configured
 - Additional tools: `curl`, `unzip`
 
@@ -64,10 +64,10 @@ This project uses Renovate Bot + GitHub Actions for fully automated dependency u
 
 | ARG | Default | Description |
 |-----|---------|-------------|
-| `CODER_PROVIDER_VERSION` | `2.8.0` | Coder Terraform provider version |
-| `DOCKER_PROVIDER_VERSION` | `3.6.2` | Docker Terraform provider version |
-| `KUBERNETES_PROVIDER_VERSION` | `2.37.1` | Kubernetes Terraform provider version |
-| `HARVESTER_PROVIDER_VERSION` | `0.6.7` | Harvester Terraform provider version |
+| `CODER_PROVIDER_VERSION` | `2.18.0` | Coder Terraform provider version |
+| `DOCKER_PROVIDER_VERSION` | `4.4.0` | Docker Terraform provider version |
+| `KUBERNETES_PROVIDER_VERSION` | `3.1.0` | Kubernetes Terraform provider version |
+| `HARVESTER_PROVIDER_VERSION` | `1.8.0` | Harvester Terraform provider version |
 
 ### Example with custom versions
 
