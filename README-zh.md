@@ -9,7 +9,7 @@
   - `coder/coder` v2.18.0
   - `kreuzwerker/docker` v4.4.0
   - `hashicorp/kubernetes` v3.1.0
-  - `harvester/harvester` v1.8.0
+  - `harvester/harvester` v1.8.1
 - 已配置 Terraform 离线镜像支持
 - 额外工具：`curl`、`unzip`
 
