@@ -8,7 +8,7 @@
 - 预安装的 Terraform 提供程序：
   - `coder/coder` v2.18.0
   - `kreuzwerker/docker` v4.4.0
-  - `hashicorp/kubernetes` v3.1.0
+  - `hashicorp/kubernetes` v3.2.1
   - `harvester/harvester` v1.8.0
 - 已配置 Terraform 离线镜像支持
 - 额外工具：`curl`、`unzip`

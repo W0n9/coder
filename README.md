@@ -8,7 +8,7 @@ A custom Docker image built on top of the official `coder/coder` image, pre-conf
 - Pre-installed Terraform providers:
   - `coder/coder` v2.18.0
   - `kreuzwerker/docker` v4.4.0
-  - `hashicorp/kubernetes` v3.1.0
+  - `hashicorp/kubernetes` v3.2.1
   - `harvester/harvester` v1.8.0
 - Terraform offline mirror support configured
 - Additional tools: `curl`, `unzip`
