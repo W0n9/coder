@@ -6,7 +6,7 @@
 
 - 基于官方 `coder/coder:v2.33.6` 镜像
 - 预安装的 Terraform 提供程序：
-  - `coder/coder` v2.18.0
+  - `coder/coder` v2.19.0
   - `kreuzwerker/docker` v4.4.0
   - `hashicorp/kubernetes` v3.1.0
   - `harvester/harvester` v1.8.0

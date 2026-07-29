@@ -6,7 +6,7 @@ A custom Docker image built on top of the official `coder/coder` image, pre-conf
 
 - Based on official `coder/coder:v2.33.6` image
 - Pre-installed Terraform providers:
-  - `coder/coder` v2.18.0
+  - `coder/coder` v2.19.0
   - `kreuzwerker/docker` v4.4.0
   - `hashicorp/kubernetes` v3.1.0
   - `harvester/harvester` v1.8.0
