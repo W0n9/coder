@@ -1,4 +1,4 @@
-FROM ghcr.io/coder/coder:v2.35.2
+FROM ghcr.io/coder/coder:v2.38.5
 
 USER root
 
